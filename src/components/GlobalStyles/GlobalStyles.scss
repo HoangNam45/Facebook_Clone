@@ -1,0 +1,16 @@
+@import 'normalize.css';
+@import url('https://fonts.cdnfonts.com/css/helvetica-neue-55?styles=16008,15981,30130');
+:root {
+    --primary: #0866ff;
+}
+html {
+    font-size: 62.5%;
+}
+* {
+    box-sizing: border-box;
+}
+body {
+    font-family: 'Helvetica Neue', sans-serif;
+    font-size: 1.6rem;
+    text-rendering: optimizeSpeed;
+}
