@@ -1,6 +1,5 @@
 import { HeaderOnly } from '../components/Layouts';
-import Home from '../pages/Home';
-import Test from '../pages/Test';
+import { Home, Test } from '../pages';
 const publicRoutes = [
     { path: '/', component: Home },
     { path: '/test', component: Test, layout: HeaderOnly },
