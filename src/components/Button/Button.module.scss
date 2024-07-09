@@ -1,0 +1,56 @@
+.wrapper {
+    background-color: #fff;
+    font-size: 20px;
+    font-weight: 700;
+    min-width: 100px;
+    padding: 0 16px;
+    border-radius: 6px;
+    cursor: pointer;
+
+    &.disabled {
+        pointer-events: none;
+        opacity: 0.5;
+    }
+}
+//Button types
+.rounded {
+    border-radius: 999px;
+    box-shadow: rgba(0, 0, 0, 0.06) 0px 2px 8px;
+    border-color: rgba(22, 24, 35, 0.12);
+    &:hover {
+        border-color: rgba(22, 24, 35, 0.2);
+        background-color: rgb(255, 255, 255);
+    }
+}
+.primary {
+    background-color: var(--primary);
+    border-color: var(--primary);
+    color: #fff;
+    &:hover {
+        border-color: var(--primary);
+        background: linear-gradient(0deg, rgba(0, 0, 0, 0.12), rgba(0, 0, 0, 0.12)), rgb(254, 44, 85);
+    }
+}
+.outline {
+    border-color: var(--primary);
+    color: var(--primary);
+    &:hover {
+        border-color: var(--primary);
+        background-color: rgba(254, 44, 85, 0.08);
+    }
+}
+.text {
+    border-color: black;
+    color: var(--text-color);
+    &:hover {
+        background-color: rgba(22, 24, 35, 0.03);
+    }
+}
+
+//Button sizes
+.medimum {
+    min-width: 88px;
+}
+.big {
+    min-width: 332px;
+}

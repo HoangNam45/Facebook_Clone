@@ -1,8 +1,8 @@
-import { HeaderOnly } from '../components/Layouts';
-import { Home, Test } from '../pages';
+import { FooterOnly } from '../components/Layouts';
+import { Home, Login } from '../pages';
 const publicRoutes = [
     { path: '/', component: Home },
-    { path: '/test', component: Test, layout: HeaderOnly },
+    { path: '/login', component: Login, layout: FooterOnly },
 ];
 const privateRoutes = [];
 export { publicRoutes, privateRoutes };
