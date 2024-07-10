@@ -1,6 +1,6 @@
 import classNames from 'classnames/bind';
 import styles from './Login.module.scss';
-import { Button } from 'react-bootstrap';
+import { Button } from '../../components/Button';
 
 const cx = classNames.bind(styles);
 
@@ -28,12 +28,19 @@ function Login() {
                         <div className={cx('auth_form_input_wrap')}>
                             <input type="password" placeholder="Mật khẩu" className={cx('auth_form_input')} />
                         </div>
-                        <div className={cx('auth_form_button_wrap')}>
-                            <Button className={cx('auth_form_button')}>Đăng nhập</Button>
+
+                        <Button primary large>
+                            Đăng nhập
+                        </Button>
+                        <div className={cx('auth_form_forget_acc')}>
+                            <a href="1">Quên tài khoản?</a>
                         </div>
-                        <a href="1">Quên tài khoản?</a>
-                        <span>hoặc</span>
-                        <Button>Tạo tài khoản mới</Button>
+                        <div className={cx('auth_form_text')}>
+                            <span>hoặc</span>
+                        </div>
+                        <Button green medium>
+                            Tạo tài khoản mới
+                        </Button>
                     </div>
                 </div>
             </div>

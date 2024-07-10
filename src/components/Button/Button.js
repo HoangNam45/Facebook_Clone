@@ -8,12 +8,9 @@ function Button({
     to,
     href,
     primary = false,
-    outline = false,
-    disabled = false,
-    rounded = false,
-    small = false,
-    big = false,
-    text = false,
+    green = false,
+    medium = false,
+    large = false,
     children,
     onClick,
     className,
@@ -25,13 +22,6 @@ function Button({
         ...passProps,
     };
     //Remove event listener when btn disabled
-    if (disabled) {
-        Object.keys(props).forEach((key) => {
-            if (key.startsWith('on') && typeof props[key] === 'function') {
-                delete props[key];
-            }
-        });
-    }
     if (to) {
         props.to = to;
         Comp = Link;
@@ -40,21 +30,20 @@ function Button({
         Comp = 'a';
     }
 
-    const classes = cx('wrapper', {
+    const classes = cx('button', {
         primary,
-        outline,
-        rounded,
-        text,
-        small,
-        big,
-        disabled,
+        green,
+        medium,
+        large,
         [className]: className,
     });
 
     return (
-        <Comp className={classes} {...props}>
-            <span>{children}</span>
-        </Comp>
+        <div className={cx('button_wrap')}>
+            <Comp className={classes} {...props}>
+                <span>{children}</span>
+            </Comp>
+        </div>
     );
 }
 export default Button;

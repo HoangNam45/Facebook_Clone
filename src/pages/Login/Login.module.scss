@@ -43,19 +43,53 @@
                     }
                 }
             }
-            .auth_form_button_wrap {
-                padding: 6px 0;
+            .auth_form_forget_acc {
+                width: 100%;
                 display: flex;
-                .auth_form_button {
-                    background-color: var(--primary);
-                    border: none;
-                    border-radius: 6px;
-                    font-size: 20px;
-                    font-weight: 500;
-                    line-height: 48px;
-                    padding: 0 16px;
-                    width: 364px;
+                justify-content: center;
+                align-items: center;
+                padding: 10px 0 2px;
+            }
+            a {
+                color: #1877f2;
+                font-size: 14px;
+                font-weight: 400;
+                cursor: pointer;
+                text-decoration: none;
+                &:hover {
+                    text-decoration: underline;
+                }
+            }
+            .auth_form_text {
+                margin: 10px 8px;
+                width: auto;
+                display: flex;
+                overflow: hidden;
+                span {
                     margin: auto;
+                    color: #96999e;
+                    position: relative;
+                    font-size: 12px;
+                    &::before {
+                        margin-right: 15px;
+                        right: 100%;
+                        content: '';
+                        height: 1px;
+                        position: absolute;
+                        top: 50%;
+                        width: 9999px;
+                        background: #d7dade;
+                    }
+                    &::after {
+                        margin-left: 15px;
+                        left: 100%;
+                        content: '';
+                        height: 1px;
+                        position: absolute;
+                        top: 50%;
+                        width: 9999px;
+                        background: #d7dade;
+                    }
                 }
             }
         }
