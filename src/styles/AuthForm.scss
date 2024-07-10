@@ -1,0 +1,18 @@
+.auth_form_fill {
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1), 0 8px 16px rgba(0, 0, 0, 0.1);
+    margin: auto;
+    padding: 0 0 14px 0;
+    width: 396px;
+    background-color: #fff;
+
+    .auth_form_fill_header {
+        padding: 24px 0 16px 0;
+        font-size: 18px;
+        line-height: 22px;
+        font-weight: 500;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+}

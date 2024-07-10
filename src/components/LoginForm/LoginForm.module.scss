@@ -1,0 +1,73 @@
+.auth_form_fill_content {
+    .auth_form_input_wrap {
+        width: 364px;
+        padding: 6px 0;
+        margin: auto;
+        .auth_form_input {
+            border-radius: 6px;
+            font-size: 17px;
+            padding: 14px 16px;
+            width: 100%;
+            border: 1px solid #dddfe2;
+            color: #607079;
+            &:focus {
+                outline: none;
+                &::placeholder {
+                    color: #bec3c9;
+                }
+                &:not(:placeholder-shown) {
+                    color: #000;
+                }
+            }
+        }
+    }
+    .auth_form_forget_acc {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 10px 0 2px;
+    }
+    a {
+        color: #1877f2;
+        font-size: 14px;
+        font-weight: 400;
+        cursor: pointer;
+        text-decoration: none;
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+    .auth_form_text {
+        margin: 10px 8px;
+        width: auto;
+        display: flex;
+        overflow: hidden;
+        span {
+            margin: auto;
+            color: #96999e;
+            position: relative;
+            font-size: 12px;
+            &::before {
+                margin-right: 15px;
+                right: 100%;
+                content: '';
+                height: 1px;
+                position: absolute;
+                top: 50%;
+                width: 9999px;
+                background: #d7dade;
+            }
+            &::after {
+                margin-left: 15px;
+                left: 100%;
+                content: '';
+                height: 1px;
+                position: absolute;
+                top: 50%;
+                width: 9999px;
+                background: #d7dade;
+            }
+        }
+    }
+}
