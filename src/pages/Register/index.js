@@ -1,5 +1,6 @@
 import classNames from 'classnames/bind';
 import styles from './Register.module.scss';
+import { RegisterForm } from '../../components/RegisterForm';
 
 const cx = classNames.bind(styles);
 
@@ -13,6 +14,7 @@ function Register() {
                     alt="fb_logo"
                 />
             </div>
+            <RegisterForm></RegisterForm>
         </div>
     );
 }

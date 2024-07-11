@@ -1,3 +1,12 @@
+.auth_form_fill_header {
+    padding: 24px 0 16px 0;
+    font-size: 18px;
+    line-height: 22px;
+    font-weight: 500;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 .auth_form_fill_content {
     .auth_form_input_wrap {
         width: 364px;
@@ -56,7 +65,7 @@
                 position: absolute;
                 top: 50%;
                 width: 9999px;
-                background: #d7dade;
+                background: var(--seperator);
             }
             &::after {
                 margin-left: 15px;
@@ -66,7 +75,7 @@
                 position: absolute;
                 top: 50%;
                 width: 9999px;
-                background: #d7dade;
+                background: var(--seperator);
             }
         }
     }
