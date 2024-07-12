@@ -1,14 +1,11 @@
-// import { Button } from '../Button';
+import { Button } from '../Button';
 import classNames from 'classnames/bind';
 import styles from './RegisterForm.module.scss';
 import '../../styles/AuthForm.scss';
 import { Form, Row, Col } from 'react-bootstrap';
+import { days, months, years } from '../../utils/DateOption';
 
 const cx = classNames.bind(styles);
-
-const days = Array.from({ length: 31 }, (_, i) => i + 1);
-const months = Array.from({ length: 12 }, (_, i) => i + 1);
-const years = Array.from({ length: 100 }, (_, i) => new Date().getFullYear() - i);
 
 function RegisterForm() {
     return (
@@ -88,6 +85,19 @@ function RegisterForm() {
                                 name="auth_form_input_sex"
                             />
                         </div>
+                    </div>
+                    <span className={cx('auth_form_policy')}>
+                        Những người dùng dịch vụ của chúng tôi có thể đã tải thông tin liên hệ của bạn lên Facebook.
+                    </span>
+                    <span className={cx('auth_form_policy')}>
+                        Bằng cách nhấp vào Đăng ký, bạn đồng ý với Điều khoản, Chính sách quyền riêng tư và Chính sách
+                        cookie của chúng tôi. Bạn có thể nhận được thông báo của chúng tôi qua SMS và hủy nhận bất kỳ
+                        lúc nào.
+                    </span>
+                    <div className={cx('auth_form_register_button')}>
+                        <Button green medium>
+                            Đăng ký
+                        </Button>
                     </div>
                 </div>
             </div>
