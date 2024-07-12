@@ -4,10 +4,28 @@ import styles from './RegisterForm.module.scss';
 import '../../styles/AuthForm.scss';
 import { Form, Row, Col } from 'react-bootstrap';
 import { days, months, years } from '../../utils/DateOption';
+import { useState } from 'react';
 
 const cx = classNames.bind(styles);
 
 function RegisterForm() {
+    const [formData, setFormData] = useState({
+        surname: '',
+        name: '',
+        account: '',
+        password: '',
+        day: '',
+        month: '',
+        year: '',
+        gender: '',
+    });
+    const handleChange = (e) => {
+        const { name, value } = e.target;
+        setFormData({
+            ...formData,
+            [name]: value,
+        });
+    };
     return (
         <div className={cx('auth_form_fill', 'customForm')}>
             <div>
@@ -17,18 +35,28 @@ function RegisterForm() {
                 </div>
                 <div className={cx('auth_form_fill_content')}>
                     <div className={cx('auth_form_input_name_wrap')}>
-                        <input type="text" placeholder="Họ" className={cx('auth_form_input_name')} />
-                        <input type="text" placeholder="Tên" className={cx('auth_form_input_name')} />
+                        <input type="text" placeholder="Họ" className={cx('auth_form_input_name')} name="surname" />
+                        <input type="text" placeholder="Tên" className={cx('auth_form_input_name')} name="name" />
                     </div>
-                    <input type="text" placeholder="Số di động hoặc email" className={cx('auth_form_input_account')} />
-                    <input type="password" placeholder="Mật khẩu" className={cx('auth_form_input_account')} />
+                    <input
+                        type="text"
+                        placeholder="Số di động hoặc email"
+                        className={cx('auth_form_input_account')}
+                        name="account"
+                    />
+                    <input
+                        type="password"
+                        placeholder="Mật khẩu"
+                        className={cx('auth_form_input_account')}
+                        name="password"
+                    />
                     <div className={cx('auth_form_des')}>Ngày sinh</div>
                     <div className={cx('auth_form_input_date-of-birth_wrap')}>
                         <Form>
                             <Form.Group>
                                 <Row>
                                     <Col>
-                                        <Form.Select className={cx('auth_form_input_date-of-birth')}>
+                                        <Form.Select className={cx('auth_form_input_date-of-birth')} name="day">
                                             <option value="">Ngày</option>
                                             {days.map((d) => (
                                                 <option key={d} value={d}>
@@ -38,7 +66,7 @@ function RegisterForm() {
                                         </Form.Select>
                                     </Col>
                                     <Col>
-                                        <Form.Select className={cx('auth_form_input_date-of-birth')}>
+                                        <Form.Select className={cx('auth_form_input_date-of-birth')} name="month">
                                             <option value="">Tháng</option>
                                             {months.map((m) => (
                                                 <option key={m} value={m}>
@@ -48,7 +76,7 @@ function RegisterForm() {
                                         </Form.Select>
                                     </Col>
                                     <Col>
-                                        <Form.Select className={cx('auth_form_input_date-of-birth')}>
+                                        <Form.Select className={cx('auth_form_input_date-of-birth')} name="year">
                                             <option value="">Năm</option>
                                             {years.map((y) => (
                                                 <option key={y} value={y}>
@@ -72,6 +100,7 @@ function RegisterForm() {
                                 className={cx('auth_form_input_sex_select_')}
                                 id="auth_form_input_sex_select_1"
                                 name="auth_form_input_sex"
+                                value="female"
                             />
                         </div>
                         <div className={cx('auth_form_input_sex')}>
@@ -83,6 +112,7 @@ function RegisterForm() {
                                 className={cx('auth_form_input_sex_select_')}
                                 id="auth_form_input_sex_select_2"
                                 name="auth_form_input_sex"
+                                value="male"
                             />
                         </div>
                     </div>
