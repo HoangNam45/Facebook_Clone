@@ -2,6 +2,7 @@
     height: 56px;
     background-color: #ffffff;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1), 0 8px 16px rgba(0, 0, 0, 0.1);
+    position: relative;
 }
 .header_logo_svg {
     background-color: #ffffff;
@@ -14,4 +15,31 @@
     .header_logo_svg_back {
         color: var(--primary);
     }
+}
+.header_search {
+    position: absolute;
+    display: flex;
+    top: 0;
+}
+.header_option {
+    display: flex;
+}
+.header_user {
+    display: flex;
+    position: absolute;
+    right: 0;
+}
+.header_option_wrap {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+.header_input {
+    height: 40px;
+    border-top-left-radius: 50px;
+    border-top-right-radius: 50px;
+    border-bottom-right-radius: 50px;
+    border-bottom-left-radius: 50px;
+    border-left-width: 0;
+    border-right-width: 0;
 }
