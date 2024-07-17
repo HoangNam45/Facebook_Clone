@@ -42,7 +42,7 @@ function RegisterForm() {
     const handleSubmit = async (e) => {
         e.preventDefault();
         const { day, month, year, ...rest } = formData;
-        const dateOfBirth = `${day}/${month}/${year}`;
+        const dateOfBirth = `${day}-${month}-${year}`;
         const newFormData = { ...rest, dateOfBirth };
         console.log(newFormData);
 

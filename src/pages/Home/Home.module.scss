@@ -1,0 +1,21 @@
+.fb_entry {
+    display: flex;
+    padding: 92px 0 232px 0;
+
+    .fb_entry_ {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        margin-right: 66px;
+        .fb_entry_logo {
+            height: 106px;
+            margin: -28px;
+        }
+        .fb_entry_text {
+            margin-top: 16px;
+            font-size: 28px;
+            line-height: 32px;
+            width: 500px;
+        }
+    }
+}
