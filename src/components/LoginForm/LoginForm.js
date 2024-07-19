@@ -3,7 +3,10 @@ import classNames from 'classnames/bind';
 import styles from './LoginForm.module.scss';
 import '../../styles/AuthForm.scss';
 import React, { useState } from 'react';
+// import { useHistory } from 'react-router-dom';
 import axios from 'axios';
+import { setToken } from '../../services/authService';
+import { useHistory } from 'react';
 
 const cx = classNames.bind(styles);
 
@@ -12,6 +15,8 @@ function LoginForm() {
         account: '',
         password: '',
     });
+    const history = useHistory();
+
     const handleChange = (e) => {
         const { name, value } = e.target;
 
@@ -22,8 +27,18 @@ function LoginForm() {
     };
     const handleSubmit = async (e) => {
         e.preventDefault();
-        axios.post('http://localhost:5000/login', formData);
+        try {
+            const response = await axios.post('http://localhost:5000/login', formData);
+            console.log(response);
+            const data = response.data;
+            const token = data.token;
+            setToken(token);
+            history.push('/');
+        } catch (error) {
+            console.error('Error login', error);
+        }
     };
+
     return (
         <form className={cx('auth_form_fill')} onSubmit={handleSubmit}>
             <div>
