@@ -3,10 +3,9 @@ import classNames from 'classnames/bind';
 import styles from './LoginForm.module.scss';
 import '../../styles/AuthForm.scss';
 import React, { useState } from 'react';
-// import { useHistory } from 'react-router-dom';
+
 import axios from 'axios';
 import { setToken } from '../../services/authService';
-import { useHistory } from 'react';
 
 const cx = classNames.bind(styles);
 
@@ -15,7 +14,6 @@ function LoginForm() {
         account: '',
         password: '',
     });
-    const history = useHistory();
 
     const handleChange = (e) => {
         const { name, value } = e.target;
@@ -33,7 +31,7 @@ function LoginForm() {
             const data = response.data;
             const token = data.token;
             setToken(token);
-            history.push('/');
+            window.location.reload();
         } catch (error) {
             console.error('Error login', error);
         }
