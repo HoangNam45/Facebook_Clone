@@ -1,5 +1,5 @@
 import { FooterOnly, HeaderOnly } from '../components/Layouts';
-import { Home, HomePage, Login, Register, Test } from '../pages';
+import { Home, HomePage, Login, Register, Test, Profile } from '../pages';
 import { isAuthenticated } from '../services/authService';
 let CompHomePage, LayoutHomePage;
 if (isAuthenticated()) {
@@ -14,6 +14,7 @@ const publicRoutes = [
     { path: '/login', component: Login, layout: FooterOnly },
     { path: '/register', component: Register, layout: FooterOnly },
     { path: '/test', component: Test, layout: FooterOnly },
+    { path: '/profile', component: Profile, layout: HeaderOnly },
 ];
 const privateRoutes = [];
 export { publicRoutes, privateRoutes };
