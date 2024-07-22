@@ -18,6 +18,11 @@ function AvtChosen({ imageSrc }) {
                     <FontAwesomeIcon icon={faXmark} className={cx('drop_avt_head_close_icon')} />
                 </div>
             </div>
+
+            <div className={cx('drop_avt_description')}>
+                <textarea placeholder="Mô tả" className={cx('drop_avt_description_input')}></textarea>
+            </div>
+
             <div>
                 <Cropper imageSrc={imageSrc} onCropComplete={(croppedImage) => setCroppedImage(croppedImage)} />
             </div>

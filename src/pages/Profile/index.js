@@ -21,7 +21,7 @@ function Profile() {
         fileInputRef.current.click();
     };
     return (
-        <div>
+        <div className={cx('user_profile_wrap')}>
             <div className={cx('user_profile_head')}>
                 <div className={cx('user_profile_back_img_wrap')}>
                     <div className={cx('user_profile_back_img')}>
