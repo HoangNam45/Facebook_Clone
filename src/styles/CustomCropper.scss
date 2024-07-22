@@ -1,0 +1,7 @@
+.cropper-container .reactEasyCrop {
+    background-color: rgba(0, 0, 0, 0.5); /* Màu nền của vùng bên ngoài */
+}
+
+.cropper-container .reactEasyCrop_CropArea {
+    background-color: transparent; /* Đảm bảo vùng cắt trong suốt */
+}

@@ -19,6 +19,8 @@
                 width: 100%;
                 height: 80px;
                 background-image: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.6));
+                border-radius: 0px 0px max(0px, min(8px, (-100% - 4px + 100vw) * 9999))
+                    max(0px, min(8px, (-100% - 4px + 100vw) * 9999)) / 0px 0px 8px 8px;
             }
         }
     }
