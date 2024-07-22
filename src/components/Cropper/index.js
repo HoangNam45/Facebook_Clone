@@ -44,6 +44,7 @@ const AvatarCropper = ({ imageSrc, onCropComplete }) => {
                 step={0.1}
                 aria-labelledby="Zoom"
                 onChange={(e, zoom) => setZoom(zoom)}
+                style={track - active - color('#fff')}
             />
             <Button variant="contained" color="primary" onClick={handleCrop}>
                 Lưu
