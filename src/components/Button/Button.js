@@ -9,6 +9,8 @@ function Button({
     href,
     primary = false,
     green = false,
+    text = false,
+    small = false,
     medium = false,
     large = false,
     children,
@@ -33,8 +35,10 @@ function Button({
     const classes = cx('button', {
         primary,
         green,
+        text,
         medium,
         large,
+        small,
         [className]: className,
     });
 
